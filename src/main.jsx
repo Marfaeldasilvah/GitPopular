@@ -1,32 +1,21 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Header from './components/Header';
+import Section from './components/Section';
+import Footer from './components/Footer';
 
-function App() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
-      .then(response => response.json())
-      .then(json => {
-        setData(json);
-        setLoading(false);
-      })
-      .catch(error => console.error('Error:', error));
-  }, []);
-
+const App = () => {
   return (
-    <div>
-      <h1>API Test</h1>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <div>
-          <h2>{data.title}</h2>
-          <p>{data.body}</p>
-        </div>
-      )}
-    </div>
+    <>
+      <Header />
+      <Section />
+      <Footer />
+    </>
   );
-}
+};
 
-export default App;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
