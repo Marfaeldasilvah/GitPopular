@@ -6,13 +6,16 @@ const Section = () => {
   const [repos, setRepos] = useState([]);
   const [language, setLanguage] = useState('Todos');
 
-  const languages = ['Todos', 'JavaScript', 'Python', 'Go', 'Ruby', 'Java'];
+  const languages = ['Todos', 'JavaScript', 'Python', 'Go', 'Ruby', 'Java', 'Nix'];
 
   useEffect(() => {
     const fetchRepos = async () => {
       let url = 'https://api.github.com/search/repositories?q=stars:>=10000&sort=stars&order=desc&per_page=28';
       if (language !== 'Todos') {
         url = `https://api.github.com/search/repositories?q=stars:>=10000+language:${language}&sort=stars&order=desc&per_page=28`;
+      }
+      if (language == 'Nix') {
+	url = `https://api.github.com/search/repositories?q=stars:>=1000+language:${language}&sort=stars&order=desc&per_page=28`;
       }
       try {
         const response = await axios.get(url);
