@@ -13,7 +13,6 @@
       buildInputs = with pkgs; [
         vscode-langservers-extracted # LSP's
         typescript-language-server # Outra LSP
-	gemini-cli #CodeAgent
       ];
 
       shellHook = ''
