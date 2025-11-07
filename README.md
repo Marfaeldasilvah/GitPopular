@@ -1,7 +1,5 @@
-Projeto de React, ver projetos populares de algumas linguás. 
+Usa API do Github para criar um grid com projetos populares.
 
 TODO: 
-> Melhorar CSS, deixar mais bonito.
-> Incrementar mais funções?
-> Modo escuro?
-> O que der aí.
+
+- Não sei, vou descobrir. para rodar ````npm run dev````
