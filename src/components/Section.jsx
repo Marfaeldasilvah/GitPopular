@@ -15,9 +15,6 @@ const Section = () => {
 			if (language !== 'Todos') {
 				url = `https://api.github.com/search/repositories?q=stars:>=10000+language:${language}&sort=stars&order=desc&per_page=28`;
 			}
-			if (language == 'Nix') {
-				url = `https://api.github.com/search/repositories?q=stars:>=1000+language:${language}&sort=stars&order=desc&per_page=28`;
-			}
 			try {
 				const response = await axios.get(url);
 				setRepos(response.data.items);
@@ -37,9 +34,15 @@ const Section = () => {
 
 					if (language === lang) {
 						classes.push('active-button');
-					} else {
-
-						classes.push('inactive-button');
+					};
+					if (language === "Ruby") {
+						classes.push('ruby');
+					}
+					if (language === "JavaScript") {
+						classes.push("JavaScript");
+					}
+					if (language === "Python") {
+						classes.push("Python");
 					}
 
 					return (
