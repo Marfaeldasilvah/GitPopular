@@ -1,5 +1,13 @@
 .active-button {
   border-width: 2px;
   border-style: solid;
-  border-color: blue;
+  border-color: #505050;
+  border-radius: 5px;
+}
+.active-button.nix-button {
+  border-color: #3030ff;
+}
+.inactive-button {
+  border-radius: 5px;
+  opacity: 80%;
 }

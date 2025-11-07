@@ -32,12 +32,29 @@ const Section = () => {
 	return (
 		<section>
 			<div>
-				{languages.map(lang => (
-					<button key={lang} onClick={() => setLanguage(lang)}
-				  className={language === lang ? 'active-button' : 'inactive-button'}>
-						{lang}
-					</button>
-				))}
+				{languages.map(lang => {
+					const classes = ['lang-button'];
+
+					if (language === lang) {
+						classes.push('active-button');
+					} else {
+
+						classes.push('inactive-button');
+					}
+
+					if (lang === 'Nix') {
+						classes.push('nix-button');
+					}
+
+					return (
+						<button
+							key={lang}
+							onClick={() => setLanguage(lang)}
+							className={classes.join(' ')}>
+							{lang}
+						</button>
+					);
+				})}
 			</div>
 			<List repos={repos} />
 		</section>
