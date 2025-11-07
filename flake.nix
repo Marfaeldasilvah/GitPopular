@@ -1,5 +1,5 @@
 {
-  description = "Proj_2";
+  description = "Github-Popular";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -11,11 +11,10 @@
   in {
     devShells.${system}.default = pkgs.mkShell {
       buildInputs = with pkgs; [
-        nodePackages.live-server
-        yarn2nix
-	yarn
-        vscode-langservers-extracted
-        typescript-language-server
+        nodePackages.live-server # Servidor-rápido
+        vscode-langservers-extracted # LSP's
+        typescript-language-server # Outra LSP
+	gemini-cli #CodeAgent
       ];
 
       shellHook = ''
