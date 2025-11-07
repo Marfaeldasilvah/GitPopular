@@ -11,7 +11,6 @@
   in {
     devShells.${system}.default = pkgs.mkShell {
       buildInputs = with pkgs; [
-        nodePackages.live-server # Servidor-rápido
         vscode-langservers-extracted # LSP's
         typescript-language-server # Outra LSP
 	gemini-cli #CodeAgent
