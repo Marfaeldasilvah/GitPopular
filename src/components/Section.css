@@ -1,11 +1,16 @@
+.section-div {
+  align-self: center; 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 8px;       
+  align-content: center;
+}
 .active-button {
   border-width: 1px;
   border-style: solid;
   border-color: #505050;
   border-radius: 5px;
-}
-.active-button.nix-button {
-  border-color: #3030ff;
 }
 .inactive-button {
   border-radius: 5px;

@@ -31,7 +31,7 @@ const Section = () => {
 
 	return (
 		<section>
-			<div>
+			<div className="section-div">
 				{languages.map(lang => {
 					const classes = ['lang-button'];
 
@@ -40,10 +40,6 @@ const Section = () => {
 					} else {
 
 						classes.push('inactive-button');
-					}
-
-					if (lang === 'Nix') {
-						classes.push('nix-button');
 					}
 
 					return (
