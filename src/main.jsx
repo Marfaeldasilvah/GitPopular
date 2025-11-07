@@ -5,17 +5,17 @@ import Section from './components/Section';
 import Footer from './components/Footer';
 
 const App = () => {
-  return (
-    <>
-      <Header />
-      <Section />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Header />
+			<Section />
+			<Footer />
+		</>
+	);
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>
 );
