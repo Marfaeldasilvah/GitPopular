@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import List from './List';
+import "./List.css"
 
 const Section = () => {
   const [repos, setRepos] = useState([]);
