@@ -34,7 +34,7 @@ const Section = () => {
 
 					if (language === lang) {
 						classes.push('active-button');
-					};
+					}
 					if (language === "Ruby") {
 						classes.push('ruby');
 					}
@@ -43,6 +43,21 @@ const Section = () => {
 					}
 					if (language === "Python") {
 						classes.push("Python");
+					}
+					if (language === "Go") {
+						classes.push("Go");
+					}
+
+					if (language === "Java") {
+						classes.push("Java");
+					}
+
+					if (language === "Nix") {
+						classes.push("Nix");
+					}
+
+					if (language === "Todos") {
+						classes.push("Todos");
 					}
 
 					return (
