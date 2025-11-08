@@ -29,6 +29,7 @@ header {
 header:hover {
 	font-size: 30px;
 	transition: 300ms;
+	text-shadow: 0 0 10px #ffffff;
 }
 
 ul {
