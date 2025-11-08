@@ -29,3 +29,18 @@
 .active-button.Python {
   color: #4B8BBE
 }
+.active-button.Go {
+  color: #5dc9e2;
+}
+
+.active-button.Java {
+  color: #3c74b4;
+}
+
+.active-button.Nix {
+  color: #405484;
+}
+
+.active-button.Todos {
+  color: #8a0e66;
+}
